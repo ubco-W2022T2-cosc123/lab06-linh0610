@@ -14,20 +14,25 @@ platform2 = loadImage("platform_14.png");// 64 x 64
 }
 
 void draw(){
-background(bk); // set the background to background_0.png
+background(bk); 
 if (leftPressed) {
-playerX -= 5; // move player left
+playerX -= 5; 
 } else if (rightPressed) {
-playerX += 5; // move player right
+playerX += 5; 
 }
-image(player, playerX, 6*H); // draw the player image at (mouseX, 6H)
+if (playerX < 0) {
+playerX = 0; 
+} else if (playerX + W > width) {
+playerX = width - W; 
+}
+image(player, playerX, 6*H); 
 image(platform1, 2*W, 7*H);
 image(platform1, W, 7*H);
 image(platform1, 3*W, 7*H);
 image(platform1, 5*W, 7*H);
 image(platform1, 4*W, 7*H);
-image(platform1, 0, 7*H);// draw the first platform image at (2W, 7H)
-image(platform2, 6*W, 7*H); // draw the second platform image at (3W, 7H)
+image(platform1, 0, 7*H);
+image(platform2, 6*W, 7*H); 
 }
 
 void keyPressed() {
