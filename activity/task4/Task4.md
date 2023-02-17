@@ -14,3 +14,4 @@ In this task you will work with the `constrain()` function.
 ## Embed an animated gif of your drawing
  
 Embed the animated gif you created here using markdown syntax: `![alt text of image](relative path to image)`
+![task4](task4.gif)
